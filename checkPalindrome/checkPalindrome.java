@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class checkPalindrome {
     public static void main (String [] args) {
-        // User input objects
+        // user input objects
         InputStreamReader reader = new InputStreamReader(System.in);
         BufferedReader console = new BufferedReader(reader);
 
