@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class multiples {
+public class Multiples {
 	public static boolean checkMultiples(int theFirst, int theSecond) {
 		// if no remainders when dividing, then it's a multiple
 		if ((theSecond % theFirst) == 0) {
@@ -16,7 +16,7 @@ public class multiples {
 
 	public static void main (String [] args) {
 		InputStreamReader reader = new InputStreamReader(System.in);
-		BufferedReader console = new BufferedReader(reader);		
+		BufferedReader console = new BufferedReader(reader);
 
 		try {
 			// ask for integers

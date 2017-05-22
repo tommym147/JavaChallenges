@@ -5,7 +5,24 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
-public class checkPalindrome {
+public class CheckPalindrome {
+    public static boolean isPalindrome(String inputString) {
+        char [] theString = inputString.toCharArray(); // converting String to char array
+
+        int frontIndex = 0;
+        int backIndex = theString.length - 1;
+
+        // iterate from both sides of array to see if characters are equal
+        while(backIndex > frontIndex) {
+            if (theString[frontIndex] != theString[backIndex]) {
+                return false; // if not equal, return false
+            }
+            frontIndex++;
+            backIndex--;
+        }
+        return true; // return true if all characters were found equal
+    }
+
     public static void main (String [] args) {
         // user input objects
         InputStreamReader reader = new InputStreamReader(System.in);
@@ -22,22 +39,5 @@ public class checkPalindrome {
         catch (IOException e) {
             System.out.println(e);
         }
-    }
-
-    public static boolean isPalindrome(String inputString) {
-        char [] theString = inputString.toCharArray(); // converting String to char array
-
-        int frontIndex = 0;
-        int backIndex = theString.length - 1;
-
-        // iterate from both sides of array to see if characters are equal
-        while(backIndex > frontIndex) {
-            if (theString[frontIndex] != theString[backIndex]) {
-                return false; // if not equal, return false
-            }
-            frontIndex++;
-            backIndex--;
-        }
-        return true; // return true if all characters were found equal
     }
 }
