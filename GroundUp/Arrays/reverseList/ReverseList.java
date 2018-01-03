@@ -1,5 +1,5 @@
 // Thomas Mejia
-// 1/3/2017
+// 1/3/2018
 // Write a program that prompts for 10 integers and displays those
 // same numbers in reverse order.
 import java.util.Scanner;
