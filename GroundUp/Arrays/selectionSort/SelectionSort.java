@@ -3,6 +3,12 @@
 // Write a program that sorts an array by using selection sort
 
 public class SelectionSort {
+	public static void swap(int [] array, int i, int j) { // function to swap values
+		int temp = array[i]; // hold first value
+		array[i] = array[j]; // copy second value to first index
+		array[j] = temp; // copy first value to second index
+	}
+	
 	public static void selectionSort(int [] array) {
 		for (int i = 0; i < array.length; i++) { // main iterator
 			int minIndex = i, // minIndex to record min value index
@@ -16,9 +22,7 @@ public class SelectionSort {
 				}
 			}
 			// swap with current index
-			int temp = array[i];
-			array[i] = array[minIndex];
-			array[minIndex] = temp;
+			swap(array, i, minIndex);
 		}
 	}
 	
